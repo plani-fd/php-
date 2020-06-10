@@ -1,0 +1,156 @@
+@charset 'utf-8';
+@import 'basic';
+
+/*-------------------------------------------------
+title       : 서브 반응형
+Author      : 플랜아이 광주
+Create date : 2020-03-09
+-------------------------------------------------*/
+
+@media (max-width: 1280px)
+{
+    // 서브메뉴
+    #snb {display: none;}
+
+    // 콘텐츠
+    #contents {float: none; width: 100%;}
+
+    // 패스
+    .location .path {width: 100%;}
+}
+
+@media (max-width: 1024px)
+{
+    // 패스
+    .location
+    {
+        .depth4,
+        .depth5 {display: none;}
+    }
+
+    // 만족도 조사
+    .contents_info #satisfy
+    {
+        .title .txt {position: static;}
+
+        .form
+        {
+            @include position(none); 
+            width: 100%; padding: 0 20rem 0 0;
+
+            .length {left: auto; right: 0; text-align: left;}
+            .btn {right: 10rem;}
+        }
+    }
+}
+
+@media (max-width: 768px)
+{
+    // 비주얼
+    #visual 
+    {
+        height: 25rem; margin-bottom: 3rem;
+
+        .control span {@include hidden; display: block;}
+    }
+
+    // 패스
+    .location {display: none;}
+
+    // 탭메뉴
+    .depth4_tab
+    {
+        ul > li 
+        {
+            @include hidden;
+            display: block; margin-bottom: -1px;
+
+            & + li {border-left: 1px solid #ddd;}
+
+            a {position: relative; text-align: left;}
+
+            &.active 
+            {
+                @include visible;
+
+                a
+                {
+                    padding-right: 4rem;
+
+                    &::after {@include icon(type2); right: 1.5rem; content: ''; transition: $time2;}
+                }
+            }
+        }
+
+        &.active ul > li 
+        {
+            @include visible;
+
+            &.active a::after {transform: rotate(180deg);}
+        }
+    }
+
+    // 서브 유틸
+    .contents_util .util .print {display: none;}
+
+    // 콘텐츠
+    #contents {margin-bottom: 2rem;}
+    h1#title {padding-top: 0;}
+
+    // 서브 하단
+    .contents_info
+    {
+        // 담당자
+        .duty
+        {
+            .list 
+            {
+                width: calc(100% - 3rem);
+
+                li {float: none;}
+            }
+
+            .label 
+            {
+                display: inline-block; position: relative; width: 10rem; margin-right: 1rem; vertical-align: middle;
+
+                &::after {@include position(top); right: 0; margin: 0;}
+            }
+
+            .date {display: block; position: static; padding-left: 4rem;}
+        }
+        
+        .qr {display: none;}
+    }
+
+    // 공공누리
+    .kogl .txt {padding: 1.5rem;}
+}
+
+@media (max-width: 420px)
+{
+    // 콘텐츠
+    h1#title {margin-bottom: 0; text-align: center;}
+
+    // 공유하기
+    .contents_util
+    {
+        margin-bottom: 2rem;
+
+        .util {position: static; margin: 0; text-align: center;}
+    }
+
+    // 만족도 조사
+    .contents_info #satisfy
+    {
+        .list .form_radio {display: block;}
+
+        .form 
+        {
+            height: auto; padding-right: 0;
+
+            .btn {position: static; height: 4rem; vertical-align: top;}
+            .length {top: auto; bottom: 0; text-align: right; line-height: 4rem;}
+        }
+    }
+}
