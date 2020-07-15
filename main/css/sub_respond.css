@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import url("contents_repond.css");
+/*-------------------------------------------------
+title       : 서브 반응형
+Author      : 플랜아이 광주
+Create date : 2020-03-09
+-------------------------------------------------*/
+@media (max-width: 1280px) { #snb { display: none; }
+  #contents { float: none; width: 100%; }
+  .location .path { width: 100%; } }
+
+@media (max-width: 1024px) { .location .depth4, .location .depth5 { display: none; }
+  .contents_info #satisfy .title .txt { position: static; }
+  .contents_info #satisfy .form { position: relative; top: auto; left: auto; right: auto; bottom: auto; -webkit-transform: translate(0, 0); transform: translate(0, 0); width: 100%; padding: 0 20rem 0 0; }
+  .contents_info #satisfy .form .length { left: auto; right: 0; text-align: left; }
+  .contents_info #satisfy .form .btn { right: 10rem; } }
+
+@media (max-width: 768px) { #visual { height: 25rem; margin-bottom: 3rem; }
+  #visual .control span { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; display: block; }
+  .location { display: none; }
+  .depth4_tab ul > li { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; display: block; margin-bottom: -1px; }
+  .depth4_tab ul > li + li { border-left: 1px solid #ddd; }
+  .depth4_tab ul > li a { position: relative; text-align: left; }
+  .depth4_tab ul > li.active { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; }
+  .depth4_tab ul > li.active a { padding-right: 4rem; }
+  .depth4_tab ul > li.active a::after { position: absolute; top: auto; left: auto; right: auto; font-family: "xeicon"; right: 1.5rem; content: ''; -webkit-transition: all 0.2s; transition: all 0.2s; }
+  .depth4_tab.active ul > li { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; }
+  .depth4_tab.active ul > li.active a::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+  .contents_util .util .print { display: none; }
+  #contents { margin-bottom: 2rem; }
+  #contents_title { padding-top: 0; }
+  .contents_info { margin-top: 5rem; }
+  .contents_info .duty .list { width: calc(100% - 3rem); }
+  .contents_info .duty .list li { float: none; }
+  .contents_info .duty .label { display: inline-block; position: relative; width: 10rem; margin-right: 1rem; vertical-align: middle; }
+  .contents_info .duty .label::after { position: absolute; top: 50%; left: auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); right: 0; margin: 0; }
+  .contents_info .duty .date { display: block; position: static; padding-left: 4rem; }
+  .contents_info .qr { display: none; }
+  .kogl .txt { padding: 1.5rem; } }
+
+@media (max-width: 420px) { #contents_title { margin-bottom: 0; text-align: center; }
+  .contents_util { margin-bottom: 2rem; }
+  .contents_util .util { position: static; margin: 0; text-align: center; }
+  .contents_info #satisfy .list .form_radio { display: block; }
+  .contents_info #satisfy .form { height: auto; padding-right: 0; }
+  .contents_info #satisfy .form .btn { position: static; height: 4rem; vertical-align: top; }
+  .contents_info #satisfy .form .length { top: auto; bottom: 0; text-align: right; line-height: 4rem; } }
