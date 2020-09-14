@@ -70,16 +70,13 @@
 				
 			<div id="contents">
 				<div class="contents_util">
-					<h1 id="contents_title">서브메뉴1-1-1</h1>
+					<h1 id="contents_title"><?php echo $_last?></h1>
 					
 					<nav class="location">
 						<ul class="path">
 							<li class="icon"><a href="">홈</a></li>
-							<li><a href="">컨텐츠</a></li>							
-							<li><a href="">단순메뉴구조</a></li>							
-							<li><a href="">서브메뉴1-1-1</a></li>							
-							<li><a href="">탭1차-1</a></li>							
-							<li><a href="" class="active">탭2차-1</a></li>
+							<li><a href=""><?php echo implode('</span> <span>', $_path);?></a></li> 
+							<li><a href="" class="active"><?php echo $_last?></a></li>
 						</ul>
 					
 						<ul class="list depth1">
