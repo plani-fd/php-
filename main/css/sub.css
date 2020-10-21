@@ -78,27 +78,19 @@ Create date : 2020-03-03
 
 .location .path li.icon a::before { display: block; width: 100%; height: 100%; font-family: "xeicon"; text-align: center; line-height: inherit; content: ''; }
 
-.location .list { float: left; position: relative; width: 20rem; padding-top: 6.8rem; border: 1px solid #303b50; background-color: #fff; }
+.location .list { display: inline-block; width: calc(100% - 7rem); }
 
-.location .list a { display: block; position: relative; padding: 0 2rem; border-right: 1px solid rgba(255, 255, 255, 0.2); }
+.location .list > li { float: left; position: relative; width: 20rem; max-width: 20%; height: 6.9rem; border-right: 1px solid rgba(255, 255, 255, 0.2); line-height: 6.8rem; }
 
-.location .list li { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; background-color: #fff; }
+.location .list > li button { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; position: relative; width: 100%; height: 100%; padding: 0 4rem 0 2rem; background-color: #303b50; text-align: left; color: #fff; line-height: inherit; }
 
-.location .list li.active { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; position: absolute; left: 0; top: 0; width: 100% !important; height: 6.8rem; padding: 0 !important; background: 0 none; color: #fff; line-height: 6.8rem; }
+.location .list > li button::after { position: absolute; top: auto; left: auto; right: auto; font-family: "xeicon"; right: 2rem; top: 0; content: ''; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
-.location .list li.active a { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 4rem; background-color: #303b50; }
+.location .list > li ul { visibility: hidden; overflow: hidden; position: absolute; left: 0; top: 100%; width: 100%; height: 0; padding: 0 1rem; border: 1px solid #303b50; background-color: #fff; line-height: 1.5; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
-.location .list li.active a::after { position: absolute; top: auto; left: auto; right: auto; font-family: "xeicon"; right: 2rem; top: 0; content: ''; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.location .list > li.active button::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 
-.location .list.active { padding-bottom: 1rem; }
-
-.location .list.active li { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; -webkit-transition: all 0.2s; transition: all 0.2s; white-space: nowrap; }
-
-.location .list.active li:first-child, .location .list.active li.active:first-child + li { padding-top: 1rem; }
-
-.location .list.active li.active a { height: 6.9rem; }
-
-.location .list.active li a::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.location .list > li.active ul { visibility: visible; height: auto; padding: 1rem; }
 
 .contents_util .util { position: absolute; right: 0; top: auto; margin-top: -7rem; }
 
@@ -175,72 +167,6 @@ Create date : 2020-03-03
 #depth5_menu_ul a::before { position: absolute; left: 0; bottom: 0; width: 0; height: 0.3rem; background-color: #484c58; content: ''; -webkit-transition: all 0.2s; transition: all 0.2s; }
 
 #depth5_menu_ul a:hover::before, #depth5_menu_ul a:focus::before { width: 100%; }
-
-.contents_info { margin-top: 10rem; }
-
-.contents_info > * + * { margin-top: -1px; }
-
-.contents_info .duty { overflow: hidden; position: relative; padding: 1.5rem 2rem; border: 1px solid #ddd; line-height: 3rem; }
-
-.contents_info .duty .title { font-size: 2rem; float: left; overflow: hidden; width: 3rem; height: 3rem; border-radius: 100%; background-color: #3c4165; font-weight: 400; color: #fff; text-align: center; }
-
-.contents_info .duty .title::before { display: block; width: 100%; height: 100%; font-family: "xeicon"; text-align: center; line-height: inherit; content: ''; }
-
-.contents_info .duty .label { font-weight: 500; color: #3c4165; }
-
-.contents_info .duty .label::after { display: inline-block; position: relative; top: -2px; width: 1px; height: 1.2rem; margin: 0 0.5rem 0 0.75rem; background-color: #ddd; content: ''; vertical-align: middle; }
-
-.contents_info .duty .list { float: left; width: calc(100% - 25rem); padding-left: 1rem; }
-
-.contents_info .duty .list li { float: left; margin-right: 2rem; }
-
-.contents_info .duty .list li:last-child { margin-right: 0; }
-
-.contents_info .duty .date { position: absolute; right: 2rem; top: 1.5rem; }
-
-.contents_info .group { display: table; width: calc(100% + 0px); table-layout: fixed; }
-
-.contents_info .group > * { display: table-cell; padding-right: 0px; vertical-align: middle; }
-
-.contents_info .group .item + .item { border-left: 0 none; }
-
-.contents_info .group > .qr:first-child { float: right; }
-
-.contents_info .group .qr { width: 15rem; border: 1px solid #ddd; }
-
-.contents_info #satisfy { position: relative; padding: 2.5rem 3rem; border: 1px solid #ddd; background-color: #f6f7f9; }
-
-.contents_info #satisfy .title { font-size: 1.6rem; position: relative; margin-bottom: 1rem; font-weight: 300; }
-
-.contents_info #satisfy .title > strong { font-size: 1.8rem; font-weight: 600; color: #333; }
-
-.contents_info #satisfy .title > span { display: block; color: #484c58; line-height: 1.5; }
-
-.contents_info #satisfy .title .txt { position: absolute; right: 0; bottom: 0; }
-
-.contents_info #satisfy .title .txt::before { content: '['; }
-
-.contents_info #satisfy .title .txt::after { content: ']'; }
-
-.contents_info #satisfy .title .txt span + span::before { content: ' / '; }
-
-.contents_info #satisfy .title .txt strong { font-weight: 400; }
-
-.contents_info #satisfy .list { padding: 1rem 0; }
-
-.contents_info #satisfy .form { position: absolute; right: 2.5rem; bottom: 3rem; width: 40rem; height: 4rem; padding: 0 10rem; line-height: 4rem; }
-
-.contents_info #satisfy .form .length { position: absolute; left: 0; top: 0; width: 9rem; text-align: right; }
-
-.contents_info #satisfy .form .btn { position: absolute; right: 0; bottom: 0; width: 10rem; height: 100%; border: 0 none; background-color: #484c58; color: #fff; text-align: center; }
-
-.kogl { display: table; width: calc(100% + 0px); table-layout: fixed; border: 1px solid #ddd; }
-
-.kogl > * { display: table-cell; padding-right: 0px; vertical-align: middle; }
-
-.kogl .img { width: 17rem; padding: 1rem; border-right: 1px solid #ddd; text-align: center; }
-
-.kogl .txt { padding: 3rem; }
 
 .form_textbox { width: 100%; height: 4rem; max-height: 100%; padding: 0 1rem; border: 1px solid #ddd; text-align: left; vertical-align: top; -webkit-transition: all 0.2s; transition: all 0.2s; }
 

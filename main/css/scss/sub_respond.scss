@@ -28,21 +28,6 @@ Create date : 2020-03-09
         .depth4,
         .depth5 {display: none;}
     }
-
-    // 만족도 조사
-    .contents_info #satisfy
-    {
-        .title .txt {position: static;}
-
-        .form
-        {
-            @include position(none); 
-            width: 100%; padding: 0 20rem 0 0;
-
-            .length {left: auto; right: 0; text-align: left;}
-            .btn {right: 10rem;}
-        }
-    }
 }
 
 @media (max-width: 768px)
@@ -97,37 +82,6 @@ Create date : 2020-03-09
     // 콘텐츠
     #contents {margin-bottom: 2rem;}
     #contents_title {padding-top: 0;}
-
-    // 서브 하단
-    .contents_info
-    {
-        margin-top: 5rem;
-
-        // 담당자
-        .duty
-        {
-            .list 
-            {
-                width: calc(100% - 3rem);
-
-                li {float: none;}
-            }
-
-            .label 
-            {
-                display: inline-block; position: relative; width: 10rem; margin-right: 1rem; vertical-align: middle;
-
-                &::after {@include position(top); right: 0; margin: 0;}
-            }
-
-            .date {display: block; position: static; padding-left: 4rem;}
-        }
-        
-        .qr {display: none;}
-    }
-
-    // 공공누리
-    .kogl .txt {padding: 1.5rem;}
 }
 
 @media (max-width: 420px)
@@ -141,19 +95,5 @@ Create date : 2020-03-09
         margin-bottom: 2rem;
 
         .util {position: static; margin: 0; text-align: center;}
-    }
-
-    // 만족도 조사
-    .contents_info #satisfy
-    {
-        .list .form_radio {display: block;}
-
-        .form 
-        {
-            height: auto; padding-right: 0;
-
-            .btn {position: static; height: 4rem; vertical-align: top;}
-            .length {top: auto; bottom: 0; text-align: right; line-height: 4rem;}
-        }
     }
 }

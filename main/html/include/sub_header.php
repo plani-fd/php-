@@ -78,41 +78,54 @@
 							<li><a href=""><?php echo implode('</span> <span>', $_path);?></a></li> 
 							<li><a href="" class="active"><?php echo $_last?></a></li>
 						</ul>
-					
-						<ul class="list depth1">
-							<li class="active"><a href="">컨텐츠</a></li>
-							<li><a href="">게시판</a></li>
-							<li><a href="">갤러리</a></li>
-							<li><a href="">멤버쉽 프로그램</a></li>
-							<li><a href="">기타 프로그램</a></li>
-						</ul>
 
-						<ul class="list depth2">
-							<li class="active"><a href="">단순메뉴구조</a></li>
-							<li><a href="">콘텐츠담당자</a></li>
-							<li><a href="">공공누리</a></li>
-							<li><a href="">메뉴옵션</a></li>
-						</ul>
-
-						<ul class="list depth3">
-							<li class="active"><a href="">서브메뉴1-1-1</a></li>
-							<li><a href="">서브메뉴1-1-2</a></li>
-							<li><a href="">서브메뉴1-1-3</a></li>
-							<li><a href="">서브메뉴1-1-4</a></li>
-						</ul>
-
-						<ul class="list depth4">
-							<li class="active"><a href="">탭1차-1</a></li>
-							<li><a href="">탭1차-2</a></li>
-							<li><a href="">탭1차-3</a></li>
-							<li><a href="">탭1차-4</a></li>
-						</ul>
-
-						<ul class="list depth5">
-							<li class="active"><a href="">탭2차-1</a></li>
-							<li><a href="">탭2차-2</a></li>
-							<li><a href="">탭2차-3</a></li>
-							<li><a href="">탭2차-4</a></li>
+						<ul class="list">
+							<li>
+								<buton class="label">메뉴</buton>
+								<ul class="list depth1">
+									<li class="active"><a href="">컨텐츠</a></li>
+									<li><a href="">게시판</a></li>
+									<li><a href="">갤러리</a></li>
+									<li><a href="">멤버쉽 프로그램</a></li>
+									<li><a href="">기타 프로그램</a></li>
+								</ul>
+							</li>
+							<li>
+								<buton class="label">메뉴</buton>
+								<ul class="list depth2">
+									<li class="active"><a href="">단순메뉴구조</a></li>
+									<li><a href="">콘텐츠담당자</a></li>
+									<li><a href="">공공누리</a></li>
+									<li><a href="">메뉴옵션</a></li>
+								</ul>
+							</li>
+							<li>
+								<buton class="label">메뉴</buton>
+								<ul class="list depth3">
+									<li class="active"><a href="">서브메뉴1-1-1</a></li>
+									<li><a href="">서브메뉴1-1-2</a></li>
+									<li><a href="">서브메뉴1-1-3</a></li>
+									<li><a href="">서브메뉴1-1-4</a></li>
+								</ul>
+							</li>
+							<li>
+								<buton class="label">메뉴</buton>
+								<ul class="list depth4">
+									<li class="active"><a href="">탭1차-1</a></li>
+									<li><a href="">탭1차-2</a></li>
+									<li><a href="">탭1차-3</a></li>
+									<li><a href="">탭1차-4</a></li>
+								</ul>
+							</li>
+							<li>
+								<buton class="label">메뉴</buton>
+								<ul class="list depth5">
+									<li class="active"><a href="">탭2차-1</a></li>
+									<li><a href="">탭2차-2</a></li>
+									<li><a href="">탭2차-3</a></li>
+									<li><a href="">탭2차-4</a></li>
+								</ul>
+							</li>
 						</ul>
 					</nav>
 

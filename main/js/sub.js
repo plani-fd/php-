@@ -39,33 +39,11 @@ $(function()
         'button'            : '.active a',  // 이벤트 받을 타겟 선택
         'respond'           : true          // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
     });
-    
-    // location 전체를 메뉴로 사용할 때
-    // $('.path > li:nth-child(n+2) > a').on('click', function()
-    // {
-    //     inx = $(this).parent('li').index();
-
-    //     $(this).parent('li').addClass('active');
-
-    //     if ( $('.location').find('.depth' + inx + '').length > 0 )
-    //     {
-    //         if ( $('.location').find('.depth' + inx + '').hasClass('active') == false )
-    //         {
-    //             $('.location').find('.depth' + inx + '').addClass('active');
-    //         }
-    //         else
-    //         {
-    //             $('.location').find('.depth' + inx + '').removeClass('active');
-    //         }
-
-    //         return false;
-    //     }
-    // });
 
     // location 중 list만 메뉴로 사용
-    $('.location .list').classtoggle
+    $('.location .list > li').classtoggle
     ({
-        'button'        : '.active a'   // 이벤트 받을 타겟 선택
+        'button'        : 'button'   // 이벤트 받을 타겟 선택
     });
 
     // 공유하기
